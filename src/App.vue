@@ -1,43 +1,45 @@
 <template>
-<div class="titre"><h1>Météo.app</h1>
-          </div>
-          <div class="choix">
-            <p>Saisissez votre ville :</p>
-              <input class="saisie" placeholder="votre ville" v-model="ville" @keyup.enter="meteoParVille">
-              <button class="bouton" @click="meteoParVille">valider</button>
-            <p>Ou</p>
-          <button class="boutonloc" @click="meteoParLoc">Utiliser la géolocalisation</button>
-          </div>
-        <div class="cadre-meteo">
-          <h1  class="ville">Météo à : {{ville}} </h1>
-          </div>  
+  <div class="titre"><h1>Météo.app</h1></div>
+  <div class="choix">
+    <p>Saisissez votre ville :</p>
+    <div class="boubou">
+      <input
+        class="saisie"
+        placeholder="votre ville"
+        v-model="ville"
+        @keyup.enter="meteoParVille"
+      />
 
-          <div :class="card">
-          
-          <Meteo
-            v-for="(element,index) in tableaumeteo"
-            :key="index"
-            :dateTime="element.dt_txt"
-            :temp="element.main.temp"
-            :tempMin="element.main.temp_min"
-            :tempMax="element.main.temp_max"
-            :speed="element.wind.speed"
-            :description="element.weather[0].description"
-            :icon="element.weather[0].icon"
-            />
-            
-            </div>
-          
-      
-  
+      <button class="bouton" @click="meteoParVille">valider</button>
+    </div>
+    <p>Ou</p>
+    <button class="boutonloc" @click="meteoParLoc">
+      Utiliser la géolocalisation
+    </button>
+  </div>
+  <div class="cadre-meteo">
+    <h1 class="ville">Météo à : {{ ville }}</h1>
+  </div>
+
+  <div :class="card">
+    <Meteo
+      v-for="(element, index) in tableaumeteo"
+      :key="index"
+      :dateTime="element.dt_txt"
+      :temp="element.main.temp"
+      :tempMin="element.main.temp_min"
+      :tempMax="element.main.temp_max"
+      :speed="element.wind.speed"
+      :description="element.weather[0].description"
+      :icon="element.weather[0].icon"
+    />
+  </div>
 </template>
 
 <script>
-import Meteo from './components/meteo.vue'
+import Meteo from "./components/meteo.vue";
 
 export default {
-
-
   components: {
     Meteo: Meteo,
   },
@@ -125,16 +127,12 @@ export default {
       }
     },
   },
-
-  
-  
-  }
-
+};
 </script>
 
 <style>
 body {
-  background-image: url('./assets/Beautiful-sky-clouds-sunset_m.jpeg');
+  background-image: url("./assets/Beautiful-sky-clouds-sunset_m.jpeg");
   background-size: cover;
   color: white;
   font-family: "Barlow", sans-serif;
@@ -164,16 +162,23 @@ body {
   background-color: rgb(189, 235, 243);
   color: #809bce;
 }
+
+.boubou {
+  display: flex;
+  flex-wrap: wrap;
+}
 .bouton {
   height: 30px;
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 10px;
   background-color: #809bce;
+  border: 1px solid #809bce;
   color: white;
   width: 100px;
   font-size: 17px;
   box-shadow: 1px 3px 6px #444444;
+  cursor: pointer;
 }
 .boutonloc {
   height: 30px;
@@ -182,10 +187,12 @@ body {
   margin-right: 5px;
   border-radius: 10px;
   background-color: #809bce;
+  border: 1px solid #809bce;
   color: white;
   width: 200px;
   font-size: 15px;
   box-shadow: 1px 3px 6px #444444;
+  cursor: pointer;
 }
 .ville {
   text-align: center;
@@ -255,4 +262,33 @@ body {
   justify-content: center;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .titre {
+    font-size: 17px;
+    margin-left: 100px;
+  }
+
+  .choix {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 17px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    height: 483px;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    border-radius: 5px;
+    box-shadow: 4px 5px 8px #444444;
+    background-color: rgb(13, 110, 155);
+  }
+}
 </style>
