@@ -262,7 +262,36 @@ body {
   justify-content: center;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .titre {
+    font-size: 17px;
+    margin-left: 100px;
+  }
+
+  .choix {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 17px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    height: 483px;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    border-radius: 5px;
+    box-shadow: 4px 5px 8px #444444;
+    background-color: rgb(13, 110, 155);
+  }*/
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .titre {
     font-size: 17px;
     margin-left: 100px;
