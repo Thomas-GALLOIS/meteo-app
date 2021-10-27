@@ -322,6 +322,38 @@ body {
     background-color: rgb(13, 110, 155);
   }
 
+  .cardHot {
+    height: 483px;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    border-radius: 5px;
+    box-shadow: 4px 5px 8px #444444;
+    background-image: url("./assets/12-127551_fire-burning.jpeg");
+    background-size: cover;
+  }
+
+  .cardCold {
+    height: 483px;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    border-radius: 5px;
+    box-shadow: 4px 5px 8px #444444;
+    background-image: url("./assets/fond-ecran-wallpaper-image-fonds-ecran-abstrait-glace-18-660x330.jpeg");
+    background-size: cover;
+  }
+
   .partie-geoloc {
     display: none;
   }
