@@ -12,10 +12,12 @@
 
       <button class="bouton" @click="meteoParVille">valider</button>
     </div>
-    <p>Ou</p>
-    <button class="boutonloc" @click="meteoParLoc">
-      Utiliser la géolocalisation
-    </button>
+    <div class="partie-geoloc">
+      <p>Ou</p>
+      <button class="boutonloc" @click="meteoParLoc">
+        Utiliser la géolocalisation
+      </button>
+    </div>
   </div>
   <div class="cadre-meteo">
     <h1 class="ville">Météo à : {{ ville }}</h1>
@@ -318,6 +320,10 @@ body {
     border-radius: 5px;
     box-shadow: 4px 5px 8px #444444;
     background-color: rgb(13, 110, 155);
+  }
+
+  .partie-geoloc {
+    display: none;
   }
 }
 </style>
