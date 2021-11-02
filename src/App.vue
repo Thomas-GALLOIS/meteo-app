@@ -182,10 +182,6 @@ body {
   box-shadow: 3px 6px 8px #444444;
   cursor: pointer;
 }
-.bouton:hover {
-  background-color: rgb(189, 235, 243);
-  color: #809bce;
-}
 
 .partie-geoloc {
   display: flex;
@@ -205,10 +201,7 @@ body {
   box-shadow: 3px 6px 8px #444444;
   cursor: pointer;
 }
-.boutonloc:hover {
-  background-color: rgb(189, 235, 243);
-  color: #809bce;
-}
+
 .ville {
   text-align: center;
   color: white;
