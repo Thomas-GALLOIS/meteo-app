@@ -179,12 +179,21 @@ body {
   color: white;
   width: 100px;
   font-size: 17px;
-  box-shadow: 1px 3px 6px #444444;
+  box-shadow: 3px 6px 8px #444444;
   cursor: pointer;
+}
+.bouton:hover {
+  background-color: rgb(189, 235, 243);
+  color: #809bce;
+}
+
+.partie-geoloc {
+  display: flex;
 }
 .boutonloc {
   height: 30px;
   padding: 5px;
+  margin-top: 12px;
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 10px;
@@ -193,8 +202,12 @@ body {
   color: white;
   width: 200px;
   font-size: 15px;
-  box-shadow: 1px 3px 6px #444444;
+  box-shadow: 3px 6px 8px #444444;
   cursor: pointer;
+}
+.boutonloc:hover {
+  background-color: rgb(189, 235, 243);
+  color: #809bce;
 }
 .ville {
   text-align: center;
