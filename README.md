@@ -1,6 +1,6 @@
 # meteo
 
-Appli météo, petite appli déployée : https://jovial-yonath-f9dec6.netlify.app/
+Appli météo, déployée ici : https://jovial-yonath-f9dec6.netlify.app/
 
 ## Project setup
 ```
