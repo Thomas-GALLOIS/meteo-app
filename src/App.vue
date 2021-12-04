@@ -221,7 +221,7 @@ body {
   overflow-x: scroll;
   border-radius: 5px;
   box-shadow: 4px 5px 8px #444444;
-  background-color: rgb(13, 110, 155);
+  background-color: rgba(13, 110, 155, 0.3);
 }
 
 .cardHot {
